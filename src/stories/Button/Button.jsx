@@ -15,6 +15,6 @@ const StyledButton = styled.button`
     }
 `
 
-export default function Button({ label = "Button", onClick }) {
-    return <StyledButton onClick={onClick}>{label}</StyledButton>
+export default function Button({ onClick, className, children }) {
+    return <StyledButton className={className} onClick={onClick}>{children}</StyledButton>
 }
