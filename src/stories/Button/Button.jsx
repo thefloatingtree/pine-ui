@@ -13,8 +13,22 @@ const StyledButton = styled.button`
     &:hover {
         transform: translate(0, -2px);
     }
+
+    display: flex;
+    justify-content: center;
+
+    ${props => props.isFullWidth && "width: 100%"};
+    ${props => props.disabled && `
+        background-color: lightgray; 
+        cursor: not-allowed; 
+        color: black;
+        &:hover {
+            transform: translate(0, 0px);
+        }
+    `};
 `
 
-export default function Button({ onClick, className, children }) {
-    return <StyledButton className={className} onClick={onClick}>{children}</StyledButton>
+export default function Button({ onClick, isFullWidth = false, isDisabled = false, className, children }) {
+
+    return <StyledButton className={className} isFullWidth={isFullWidth} disabled={isDisabled} onClick={onClick}>{children}</StyledButton>
 }
