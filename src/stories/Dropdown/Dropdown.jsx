@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import styled from "styled-components";
 import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 import Button from "../Button/Button"
