@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 import Button from "../Button/Button"
 
 const DropdownContainer = styled.div`
@@ -49,26 +50,5 @@ export default function Dropdown({ label, isFullWidth = false, children }) {
             </Button>
             <DropdownContentContainer open={open}>{children}</DropdownContentContainer>
         </DropdownContainer>
-    );
-}
-
-// https://usehooks.com/useOnClickOutside/
-function useOnClickOutside(ref, handler) {
-    useEffect(
-        () => {
-            const listener = (event) => {
-                if (!ref.current || ref.current.contains(event.target)) {
-                    return;
-                }
-                handler(event);
-            };
-            document.addEventListener("mousedown", listener);
-            document.addEventListener("touchstart", listener);
-            return () => {
-                document.removeEventListener("mousedown", listener);
-                document.removeEventListener("touchstart", listener);
-            };
-        },
-        [ref, handler]
     );
 }
