@@ -8,24 +8,25 @@ const StyledInput = styled.input`
     font-weight: 600;
     background-color: white;
     transition: all 75ms ease-out;
+
+    ${props => props.isFullWidth && "width: 100%"};
+    ${props => props.disabled && `
+        background-color: lightgray; 
+        cursor: not-allowed;
+    `};
 `
 
-const DisabledStyledInput = styled(StyledInput)`
-    background-color: lightgray;
-    cursor: not-allowed;
-`
-
-export default function Input({ value, onChange, onEnter, placeholder, className, disabled = false }) {
+export default function Input({ value, onChange, onEnter, placeholder, className, isFullWidth = false, isDisabled = false }) {
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             onEnter()
         }
     }
 
-    const Component = disabled ? DisabledStyledInput : StyledInput;
-    return <Component
+    return <StyledInput
         type="text"
-        disabled={disabled}
+        disabled={isDisabled}
+        isFullWidth={isFullWidth}
         className={className}
         placeholder={placeholder}
         value={value}
