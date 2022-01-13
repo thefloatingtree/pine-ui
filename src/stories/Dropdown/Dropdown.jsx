@@ -4,7 +4,7 @@ import { useOnClickOutside } from "../../hooks/useOnClickOutside";
 import Button from "../Button/Button"
 
 const DropdownContainer = styled.div`
-    width: fit-content;
+    width: ${ props => props.isFullWidth ? '100%' : 'fit-content'};
 `
 
 const DropdownContentContainer = styled.div`
@@ -37,7 +37,7 @@ export default function Dropdown({ label, isFullWidth = false, children }) {
     useOnClickOutside(dropdownContainerRef, () => setOpen(false))
 
     return (
-        <DropdownContainer ref={dropdownContainerRef}>
+        <DropdownContainer isFullWidth={isFullWidth} ref={dropdownContainerRef}>
             <Button onClick={() => setOpen(!open)} isFullWidth={isFullWidth}>
                 <ButtonContentContainer>
                     <span>{label}</span>
