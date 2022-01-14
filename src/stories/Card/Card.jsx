@@ -5,7 +5,8 @@ box-shadow: 2px 2px 6px -2px grey;
 display: inline-flex;
 flex-direction: column;
 max-width: 500px;
-width: 350px;
+/* Why this not working? */
+width: ${props => props.width || '300px'};
 
 & .card-content h3, & .card-subtitle {
     margin: 0;
@@ -31,7 +32,7 @@ width: 350px;
 }
 
 & .card-actions li {
-    color: #3362fe;
+    color: ${props => props.actionColor || "6c6c6c"};
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -44,6 +45,7 @@ width: 350px;
 
 //props: image, title, subtitle, text, actions
 export default function Card(props) {
+    console.log(props)
     let actions;
     if (props.actions) {
         actions = props.actions.map(action => {
@@ -52,7 +54,7 @@ export default function Card(props) {
     }
 
     return (
-        <StyledCard className={props.className} onClick={props.onClick}>
+        <StyledCard width={props.width} actionColor={props.actionColor} className={props.className} onClick={props.onClick}>
             {props.image && <img src={props.image}/>}
             <div className="card-content">
                 {props.title && <h3>{props.title}</h3>}

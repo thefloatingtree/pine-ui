@@ -25,5 +25,7 @@ Default.args = {
             text: "Action 2",
             action: () => console.log('delete')
         }
-    ]
+    ],
+    width: '500px',
+    actionColor: "#3362fe"
 }
