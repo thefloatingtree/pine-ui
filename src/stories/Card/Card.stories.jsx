@@ -27,5 +27,8 @@ Default.args = {
         }
     ],
     width: '500px',
-    actionColor: "#3362fe"
+    actionColor: "#3362fe",
+    backgroundColor: "white",
+    textColor: 'black',
+    subtitleColor: 'grey'
 }

@@ -27,7 +27,7 @@ const StyledLoadingBar = styled.div`
 	}
 
 & .bar {
-  background: rgba(0,0,0,0.075);
+  background-color: ${props => props.backgroundColor || '#f5f5f5'};
 }
 
 & .progress {
@@ -52,7 +52,7 @@ const StyledLoadingBar = styled.div`
 `
 export default function LoadingBar(props) {
     return (
-        <StyledLoadingBar color={props.color} duration={props.duration} className={props.className}>
+        <StyledLoadingBar color={props.color} duration={props.duration} className={props.className} backgroundColor={props.backgroundColor}>
             <span className="bar">
                 <span className="progress"></span>
             </span>

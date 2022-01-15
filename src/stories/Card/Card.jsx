@@ -5,6 +5,8 @@ box-shadow: 2px 2px 6px -2px grey;
 display: inline-flex;
 flex-direction: column;
 max-width: 500px;
+background-color: ${props => props.backgroundColor || 'white'} ;
+color: ${props => props.textColor || 'black'};
 /* Why this not working? */
 width: ${props => props.width || '300px'};
 
@@ -14,7 +16,7 @@ width: ${props => props.width || '300px'};
 
 & .card-subtitle {
     margin-bottom: 1rem;
-    color: grey;
+    color: ${props => props.subtitleColor || 'grey'};
 }
 
 & .card-content {
@@ -54,7 +56,7 @@ export default function Card(props) {
     }
 
     return (
-        <StyledCard width={props.width} actionColor={props.actionColor} className={props.className} onClick={props.onClick}>
+        <StyledCard width={props.width} actionColor={props.actionColor} className={props.className} onClick={props.onClick} backgroundColor={props.backgroundColor} textColor={props.textColor} subtitleColor={props.subtitleColor}>
             {props.image && <img src={props.image}/>}
             <div className="card-content">
                 {props.title && <h3>{props.title}</h3>}

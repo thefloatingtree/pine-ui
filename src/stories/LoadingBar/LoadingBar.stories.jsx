@@ -12,5 +12,6 @@ const Template = (args) => <LoadingBar {...args}></LoadingBar>
 export const Default = Template.bind({})
 Default.args = {
     color: "#3362fe",
+    backgroundColor: "#f5f5f5",
     duration: '5s'
 }
