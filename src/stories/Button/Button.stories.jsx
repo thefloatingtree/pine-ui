@@ -1,5 +1,6 @@
 import React from 'react';
-import Button from './Button'
+import Button from './Button';
+import "../../index.css";
 
 export default {
     title: "Button",
@@ -10,5 +11,7 @@ const Template = (args) => <Button {...args}>{args.label}</Button>
 
 export const Default = Template.bind({})
 Default.args = {
-    label: "Button"
+    label: "Button",
+    isDisabled: false,
+    isFullWidth: false
 }
