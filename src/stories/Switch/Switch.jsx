@@ -50,6 +50,3 @@ export default function Switch(props) {
         </StyledSwitch>
     )
 }
-
-
-
