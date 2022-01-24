@@ -17,7 +17,6 @@ const StyledButton = styled.button`
     display: flex;
     justify-content: center;
 
-    ${props => props.isFullWidth && "width: 100%"};
     ${props => props.disabled && `
         background-color: lightgray; 
         cursor: not-allowed; 
@@ -28,7 +27,7 @@ const StyledButton = styled.button`
     `};
 `
 
-export default function Button({ onClick, isFullWidth = false, isDisabled = false, className, children }) {
+export default function Button({ onClick, isDisabled = false, className, children }) {
 
-    return <StyledButton className={className} isFullWidth={isFullWidth} disabled={isDisabled} onClick={onClick}>{children}</StyledButton>
+    return <StyledButton className={className} disabled={isDisabled} onClick={onClick}>{children}</StyledButton>
 }
