@@ -28,9 +28,7 @@ const StyledButton = styled.button`
     `}
 `
 
-const StyledSpinnerContainer = styled.div`
-    width: 1rem;
-    height: 1rem;
+const StyledSpinner = styled(Spinner)`
     margin-left: 0.5rem;
 `
 
@@ -39,9 +37,7 @@ export default function Button({ onClick, isDisabled = false, isLoading = false,
     return (
         <StyledButton className={className} disabled={isDisabled} onClick={onClick}>
             <span>{children}</span>
-            {isLoading && <StyledSpinnerContainer>
-                <Spinner />
-            </StyledSpinnerContainer>}
+            {isLoading && <StyledSpinner />}
         </StyledButton>
     )
 }
