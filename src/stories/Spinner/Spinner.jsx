@@ -3,8 +3,6 @@ import styled from "styled-components"
 
 const RotateSVG = styled.svg`
     color: black;
-    width: 1.5rem;
-    height: 1.5rem;
 
     animation-name: spin;
     animation-duration: 1000ms;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Spinner from "../Spinner/Spinner";
 
 const StyledButton = styled.button`
     border-radius: 0.5rem;
@@ -24,10 +25,23 @@ const StyledButton = styled.button`
         &:hover {
             transform: translate(0, 0px);
         }
-    `};
+    `}
 `
 
-export default function Button({ onClick, isDisabled = false, className, children }) {
+const StyledSpinnerContainer = styled.div`
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.5rem;
+`
 
-    return <StyledButton className={className} disabled={isDisabled} onClick={onClick}>{children}</StyledButton>
+export default function Button({ onClick, isDisabled = false, isLoading = false, children }) {
+
+    return (
+        <StyledButton disabled={isDisabled} onClick={onClick}>
+            <span>{children}</span>
+            {isLoading && <StyledSpinnerContainer>
+                <Spinner />
+            </StyledSpinnerContainer>}
+        </StyledButton>
+    )
 }
