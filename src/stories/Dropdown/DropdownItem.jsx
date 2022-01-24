@@ -5,6 +5,6 @@ const StyledButton = styled(Button)`
     border: none;
 `
 
-export default function DropdownItem({ children, onClick }) {
-    return <StyledButton onClick={onClick} isFullWidth>{children}</StyledButton>
+export default function DropdownItem({ children, className, onClick }) {
+    return <StyledButton className={className} onClick={onClick} isFullWidth>{children}</StyledButton>
 }

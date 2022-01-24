@@ -27,7 +27,7 @@ const Template = (args) => {
 
     return (
         <>
-            <Button onClick={() => setOpen(true)}>Testing</Button>
+            <Button onClick={() => setOpen(true)}>Trigger Modal</Button>
             <Modal isOpen={open} onClose={() => setOpen(false)}>
                 <ModalOverlay />
                 <ModalContent>

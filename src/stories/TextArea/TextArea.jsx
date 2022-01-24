@@ -19,13 +19,14 @@ const StyledTextArea = styled.textarea`
     background-color: white;
 `
 
-export default function TextArea({ value, onChange, rows = 3, placeholder, maxLength, resize = true, resizeDirection = 'both', expand = false, children }) {
+export default function TextArea({ value, onChange, rows = 3, placeholder, maxLength, resize = true, resizeDirection = 'both', expand = false, className, children }) {
 
     const Component = expand ? StyledExpandingTextArea : StyledTextArea;
     resizeDirection = expand ? 'horizontal' : resizeDirection;
 
     return (
         <Component
+            className={className}
             defaultValue={children}
             value={value}
             onChange={onChange}

@@ -13,7 +13,7 @@ const DropdownContentBox = styled.div`
     flex-direction: column;
 `
 
-export default function SelectContent({ children, _onClickChild }) {
+export default function SelectContent({ children, className, _onClickChild }) {
 
     const childrenWithProps = React.Children.map(children, child => {
         if (React.isValidElement(child)) {
@@ -22,5 +22,5 @@ export default function SelectContent({ children, _onClickChild }) {
         return child;
     });
 
-    return <DropdownContentBox>{childrenWithProps}</DropdownContentBox>
+    return <DropdownContentBox className={className}>{childrenWithProps}</DropdownContentBox>
 }

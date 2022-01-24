@@ -16,8 +16,8 @@ const StyledDiv = styled.div`
     
 `
 
-export default function ModalOverlay({ _isOpen }) {
+export default function ModalOverlay({ _isOpen, className }) {
     return (
-        <StyledDiv open={_isOpen} ></StyledDiv>
+        <StyledDiv className={className} open={_isOpen} ></StyledDiv>
     )
 }
