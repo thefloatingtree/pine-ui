@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.round-button {
+  all: unset;
+  width: 100px;
+  height: 100px;
+  border-radius: 200px;
+  font-family: sans-serif;
+  background-color: rgb(49, 49, 187);
+  color: white;
+  font-weight: bold;
+  display: block;
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 200px;
+
+}
+
+.round-button:hover {
+  background-color: rgb(64, 64, 212);;
+}
