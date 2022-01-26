@@ -1,7 +1,8 @@
-import Navbar from './stories/Navbar/Navbar'
+import NavbarMobile from './stories/Navbar/NavBarMobile';
+import NavBarTop from './stories/Navbar/NavBarTop';
 
 function App() {
-  return <Navbar></Navbar> ;
+  return <div><NavBarTop></NavBarTop><NavbarMobile></NavbarMobile></div> ;
 }
 
 export default App;
