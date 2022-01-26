@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBarTop from './NavBarTop'
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 export default {
     title: "NavBarTop",
