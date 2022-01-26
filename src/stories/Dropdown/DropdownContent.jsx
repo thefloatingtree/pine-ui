@@ -12,6 +12,6 @@ const DropdownContentBox = styled.div`
     flex-direction: column;
 `
 
-export default function DropdownContent({ children }) {
-    return <DropdownContentBox>{children}</DropdownContentBox>
+export default function DropdownContent({ children, className }) {
+    return <DropdownContentBox className={className}>{children}</DropdownContentBox>
 }

@@ -13,10 +13,10 @@ export default function Popover({ children }) {
 
     const childrenWithProps = React.Children.map(children, child => {
         if (React.isValidElement(child)) {
-            return React.cloneElement(child, { _isOpen: open, _onTrigger: handleTrigger });
+            return React.cloneElement(child, { _isOpen: open, _onTrigger: handleTrigger })
         }
-        return child;
-    });
+        return child
+    })
 
     return (
         <div ref={dropdownContainerRef}>

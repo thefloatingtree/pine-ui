@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Spinner from "../Spinner/Spinner";
 
 const StyledButton = styled.button`
     border-radius: 0.5rem;
@@ -17,7 +18,6 @@ const StyledButton = styled.button`
     display: flex;
     justify-content: center;
 
-    ${props => props.isFullWidth && "width: 100%"};
     ${props => props.disabled && `
         background-color: lightgray; 
         cursor: not-allowed; 
@@ -25,10 +25,19 @@ const StyledButton = styled.button`
         &:hover {
             transform: translate(0, 0px);
         }
-    `};
+    `}
 `
 
-export default function Button({ onClick, isFullWidth = false, isDisabled = false, className, children }) {
+const StyledSpinner = styled(Spinner)`
+    margin-left: 0.5rem;
+`
 
-    return <StyledButton className={className} isFullWidth={isFullWidth} disabled={isDisabled} onClick={onClick}>{children}</StyledButton>
+export default function Button({ onClick, isDisabled = false, isLoading = false, className, children }) {
+
+    return (
+        <StyledButton className={className} disabled={isDisabled} onClick={onClick}>
+            <span>{children}</span>
+            {isLoading && <StyledSpinner />}
+        </StyledButton>
+    )
 }

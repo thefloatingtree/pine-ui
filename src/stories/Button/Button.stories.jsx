@@ -13,5 +13,5 @@ export const Default = Template.bind({})
 Default.args = {
     label: "Button",
     isDisabled: false,
-    isFullWidth: false
+    isLoading: false
 }

@@ -11,6 +11,5 @@ const Template = (args) => <Input  {...args} />
 export const Default = Template.bind({})
 Default.args = {
     placeholder: "Input",
-    isDisabled: false,
-    isFullWidth: false
+    isDisabled: false
 }
