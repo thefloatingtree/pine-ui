@@ -2,6 +2,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import './Navbar.css'
 import styled from "styled-components";
 
+
 const DisplayWrapper = styled.div`
 @media(max-width: 768px) {
     display: none;

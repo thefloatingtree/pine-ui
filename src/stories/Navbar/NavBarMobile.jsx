@@ -1,6 +1,7 @@
 import './Navbar.css'
 import styled from "styled-components";
 
+
 const NavBarMoblileContainer = styled.div`
 @media(min-width: 768px) {
     display: none;
