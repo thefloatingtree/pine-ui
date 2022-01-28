@@ -1,6 +1,8 @@
 import React from 'react';
 import NavBarMobile from './NavBarMobile'
-import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import './Navbar.css'
+// import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+
 
 export default {
     title: "NavBarMobile",
