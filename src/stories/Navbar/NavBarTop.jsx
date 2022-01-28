@@ -11,14 +11,16 @@ const DisplayWrapper = styled.div`
 const NavBarContainer = styled.ul`
     display:flex;
     flex-wrap: nowrap;
+    
 
   `;
+
 
 function NavbarTop(props) {
     return (
         <DisplayWrapper>
         <nav className="navbar navbar-default">
-            <div className="container-fluid">
+            <div id="nav" className="container-fluid">
             <a className="navbar-brand" href="#">LOGO</a>
             <NavBarContainer className="nav navbar-nav">
             <li><a href="#">Link</a></li>
